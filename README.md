@@ -251,7 +251,7 @@ This will:
 - run 5 Task 1 cases
 - run 5 Task 2 cases
 - include one adversarial case per task
-- save a detailed report to [reports/eval_report.json](D:\Some Main Projects\Ass_Project_14-08-2026\reports\eval_report.json)
+- save a detailed report to [reports/eval_report.json]
 
 Current summary:
 
