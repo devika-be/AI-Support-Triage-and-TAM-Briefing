@@ -400,7 +400,7 @@ This architecture should still work at 10x volume, but it needs caching and requ
 - Design note: included in this README
 - Setup instructions: included
 - Sample commands: included
-- Eval report file: included at [reports/eval_report.json](D:\Some Main Projects\Ass_Project_14-08-2026\reports\eval_report.json)
+- Eval report file: included at [reports/eval_report.json]
 - `.env.example`: included
 
 ---
