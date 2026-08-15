@@ -1,0 +1,58 @@
+[
+  {
+    "id": "task2_vertex_at_risk_account",
+    "type": "task2",
+    "description": "At-risk account with escalation notes should surface critical risks and actionable talking points.",
+    "account_id": "ACC-8113",
+    "expected": {
+      "company": "Vertex Solutions",
+      "must_contain_summary": ["At Risk", "Declining"],
+      "min_risk_flags": 4,
+      "must_include_flag_titles": ["Recent P1 history", "Account health is below healthy"]
+    }
+  },
+  {
+    "id": "task2_omni_recent_ticket_quote",
+    "type": "task2",
+    "description": "Account with recent risky support ticket should include ticket-based evidence.",
+    "account_id": "ACC-3336",
+    "expected": {
+      "company": "Omni Consumer Products",
+      "must_include_ticket_quote": true,
+      "min_risk_flags": 5,
+      "must_include_flag_titles": ["Repeated outage signal", "High-severity support pattern"]
+    }
+  },
+  {
+    "id": "task2_umbrella_escalation_heavy",
+    "type": "task2",
+    "description": "Escalation-heavy account should surface commercial and stakeholder risks clearly.",
+    "account_id": "ACC-4795",
+    "expected": {
+      "company": "Umbrella Technologies",
+      "must_contain_summary": ["At Risk"],
+      "min_risk_flags": 5,
+      "must_include_flag_titles": ["Recent P1 history", "Escalation note"]
+    }
+  },
+  {
+    "id": "task2_stable_account_structure",
+    "type": "task2",
+    "description": "Healthy-ish account should still return the required 3-section structure.",
+    "account_id": "ACC-2094",
+    "expected": {
+      "company": "Orion Systems",
+      "min_risk_flags": 1,
+      "must_have_talking_points": true
+    }
+  },
+  {
+    "id": "task2_adversarial_missing_account",
+    "type": "task2",
+    "description": "Missing account should fail gracefully with a clear error.",
+    "account_id": "ACC-9999",
+    "expected": {
+      "error_contains": "was not found"
+    }
+  }
+]

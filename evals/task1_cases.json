@@ -1,0 +1,82 @@
+[
+  {
+    "id": "task1_cloudsync_webhook_integration",
+    "type": "task1",
+    "description": "CloudSync webhook delivery issue should route to integration support with KB grounding.",
+    "input": {
+      "subject": "Webhook from CloudSync not reaching PagerDuty",
+      "body": "Our CloudSync webhooks are not being delivered to PagerDuty. We've verified the endpoint is reachable and the secret is correctly configured.\n\nLast successful delivery: earlier today\nFailed deliveries since: 4731\n\nWebhook logs attached. Please advise."
+    },
+    "expected": {
+      "product": "CloudSync",
+      "issue_category": "Integration",
+      "urgency": "P2",
+      "recommended_team": "Technical Support Tier 2",
+      "relevant_doc_contains": "performance-and-integrations"
+    }
+  },
+  {
+    "id": "task1_sso_new_users_auth",
+    "type": "task1",
+    "description": "New users blocked by SSO should map to auth/onboarding support and auth KB.",
+    "input": {
+      "subject": "SSO configuration not working for new users — CloudSync",
+      "body": "We set up SSO for CloudSync last month and it works for existing users, but new joiners can't authenticate.\n\nError they see: DEPENDENCY_UNAVAILABLE: downstream service unreachable\n\nOur IDP: Salesforce\nPlan: Business\n\nPlease help — we have 308 people blocked from accessing the platform."
+    },
+    "expected": {
+      "product": "CloudSync",
+      "issue_category": "Onboarding",
+      "urgency": "P1",
+      "recommended_team": "Identity / Platform Support",
+      "relevant_doc_contains": "authentication-sso"
+    }
+  },
+  {
+    "id": "task1_billing_invoice_question",
+    "type": "task1",
+    "description": "Invoice and seat count question should classify as billing and route to billing operations.",
+    "input": {
+      "subject": "Billing question about SecureVault invoice",
+      "body": "Hi,\n\nI have a question about our latest invoice (Invoice #49829). We were charged for 282 seats but only have 275 active users.\n\nCould you clarify the billing logic and process a credit if applicable?\n\nAccount: ACC-9375"
+    },
+    "expected": {
+      "product": "SecureVault",
+      "issue_category": "Billing",
+      "urgency": "P3",
+      "recommended_team": "Billing Operations",
+      "relevant_doc_contains": "billing-and-plans"
+    }
+  },
+  {
+    "id": "task1_data_loss_sync_issue",
+    "type": "task1",
+    "description": "Missing records and restore request should be treated as data loss risk.",
+    "input": {
+      "subject": "Data not syncing between SecureVault and Jira",
+      "body": "Our SecureVault instance stopped syncing with Jira approximately last week. We're now seeing a 140-record discrepancy.\n\nSync config has not changed. Last successful sync: last week.\n\nPlease help us restore sync and recover the missing records."
+    },
+    "expected": {
+      "product": "SecureVault",
+      "issue_category": "Data Loss",
+      "urgency": "P2",
+      "recommended_team": "Incident Response / Escalation",
+      "relevant_doc_contains": "performance-and-integrations"
+    }
+  },
+  {
+    "id": "task1_adversarial_ambiguous_no_product",
+    "type": "task1",
+    "description": "Ambiguous performance complaint without product mention should still return a structured response.",
+    "input": {
+      "subject": "Everything is timing out",
+      "body": "The system has been extremely slow since this morning and several operations are timing out after about 30 seconds. We need guidance on what to check next."
+    },
+    "expected": {
+      "product": "Unknown",
+      "issue_category": "Performance",
+      "urgency": "P2",
+      "recommended_team": "Technical Support Tier 2",
+      "relevant_doc_contains": "performance-and-integrations"
+    }
+  }
+]
