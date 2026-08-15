@@ -109,7 +109,7 @@ Current result:
 
 Saved report:
 
-- [reports/eval_report.json](D:\Some Main Projects\Ass_Project_14-08-2026\reports\eval_report.json)
+- [reports/eval_report.json]
 
 ---
 
